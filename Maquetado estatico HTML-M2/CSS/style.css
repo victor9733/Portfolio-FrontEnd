@@ -1,0 +1,438 @@
+root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 1o px */   
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6 rem;
+    line-height: 2;
+    background-color: #282C33;
+    max-width: 100%;
+}
+
+/*
+.contenedor {
+    max-width: 120 rem;
+    width: 90%;
+    margin: 0 auto;
+}
+*/
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+
+/** Header **/
+
+.header {
+    padding: 3rem 5rem;
+    margin-bottom: 5rem;
+}
+
+
+.navegacion_enlace{
+    display: block;
+    margin-bottom: 1rem;
+}
+.navegacion {
+    align-items: center;
+}
+.login{
+    height: 23px;
+    margin: 0 auto;
+}
+img.login{
+    filter: invert(100%) sepia(9%) saturate(5693%) hue-rotate(178deg) brightness(79%) contrast(86%);
+}
+img.login:hover{
+    cursor: pointer;
+}
+
+.contenedor{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 6rem;
+}
+
+@media (min-width: 768px){
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+    .navegacion_enlace{
+        margin-bottom: 0;
+    }
+}
+h1.nombre{
+    color: white;
+    font-size: 16px;
+}
+
+.logo{
+    height: 15px;
+    margin-right: 5px;
+}
+.nombre{
+    font-family: 'Fira Code';
+    font-size: 1.6rem;
+    user-select: none;
+}
+.navegacion a{
+    color: #ABB2BF;
+    font-size: 16px;
+}
+.navegacion a:hover{
+    color: white;
+}
+.simbolo{
+    color: #C778DD;
+}
+.navegacion a:hover .simbolo{
+    color: rgb(174, 29, 153);
+}
+
+
+
+/* Presentación */
+
+
+.presentacion{
+    padding: 3rem 5rem;
+    margin: 0 auto;
+}
+
+.descripcion{
+    font-family: 'Fira Code';
+    color: #ABB2BF;
+    margin-bottom: 3rem;
+    font-size: 13px;
+}
+.descripcion h1 span{
+    color: #C778DD;
+}
+.descripcion p{
+    font-size: 16px;
+}
+.avatar{
+    width: 180px;
+    position: relative;
+}
+
+div .contenedor_svg{
+    text-align: center;
+}
+/* .logo2{
+    width: 98px;
+    position: absolute;
+}
+.puntos {
+    width: 50px;
+    position: relative;
+    right: 40px;
+} */
+
+
+@media (min-width: 768px){
+    .presentacion {
+        display: grid;
+        grid-template-columns: 30% 40%;
+        align-items: center;
+        justify-content: center;
+        column-gap: 4rem;
+    }
+    .contenedor_svg{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 5rem;
+    }
+    .descripcion{
+        grid-column: 2/3;
+    }
+    .avatar{
+        width: 200px;
+    }
+    /* .puntos {
+        width: 50px;
+        position: relative;
+        right: 40px;
+    } */
+    .descripcion{
+        margin: 0;
+    }
+}
+
+
+/* Sobre mí */
+
+.sobreMi_contenedor{
+    padding: 3rem 5rem;
+    margin-top: 6rem;
+}
+.sobreMi{
+    display: flex;
+    flex-direction: column;
+}
+.sobreMi h1{
+    font-family: 'Fira Code';
+    font-size: 23px;
+    color: #ABB2BF;
+    margin: 0;
+}
+hr{
+    width: 100%;
+    height: 1px;
+    background-color: #C778DD;
+}
+.sobreMi_contenedor p{
+    color: #ABB2BF;
+    font-family: 'Fira Code';
+    font-size: 16px;
+}
+
+
+/* Habilidades */
+
+.habilidades{
+    padding: 3rem 5rem;
+    margin-top: 60px;
+}
+.p_habilidades {
+    font-size: 15px;
+    color: #ABB2BF;
+    margin: 0;
+    text-align: center;
+    font-family: 'Fira Code';
+}
+
+.icon_habilidades img{
+    height: 90px;
+    
+    display: block;
+    margin: 0 auto;
+}
+.icon_html:hover{
+    filter: invert(86%) sepia(33%) saturate(6558%) hue-rotate(184deg) brightness(184%) contrast(82%);
+}
+.icon_css:hover{
+    filter: invert(86%) sepia(33%) saturate(6558%) hue-rotate(357deg) brightness(100%) contrast(82%);
+}
+.icon_java:hover{
+    filter: invert(86%) sepia(33%) saturate(6558%) hue-rotate(194deg) brightness(315%) contrast(82%);
+}
+.icon_git:hover{
+    filter: invert(86%) sepia(39%) saturate(6558%) hue-rotate(170deg) brightness(139%) contrast(82%);
+}
+.icon_scss:hover{
+    filter: invert(86%) sepia(33%) saturate(6558%) hue-rotate(90deg) brightness(184%) contrast(82%);
+}
+.icon_habilidades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    margin-top: 5rem;
+}
+
+@media (max-width: 1080px) and (min-width: 768px){
+    .icon_habilidades img{
+        width: 60px;
+    }
+    .icon_habilidades {
+        gap: 6rem;
+        margin-top: 5rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px){
+    .icon_habilidades {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 8rem;
+        row-gap: 7rem;
+    }
+    .icon_habilidades img{
+        width: 70px;
+    }
+    .elemento_svg {
+        grid-column: 1/3;
+        justify-content: center;
+        align-items: center;
+    }
+    .elemento_svg img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Poryectos */
+
+.proyectos{
+    padding: 3rem 5rem;
+    margin-top: 60px;
+}
+.contenedor_h .img_1{
+    height: 90px;
+}
+
+.contenedor_p {
+    display: flex;
+    gap: 4rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor_h img{
+    height: 90px;
+}
+.contenedor_h{
+    padding: 0 5rem;
+    text-align: center;
+}
+.contenedor_h h1{
+    color: #ABB2BF;
+    font-family: 'Fira Code';
+}
+
+/* Contacto */
+
+li{
+    list-style: none;
+}
+
+.contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 6rem;
+    padding: 3rem 5rem;
+    margin-top: 60px;
+}
+.contacto-text h1{
+    font-size: 35px;
+}
+.contacto-text h2{
+    color: #C778DD;
+    margin: 15px 0;
+    font-family: 'Fira Code';
+    font-size: 25px;
+}
+.contacto-text h1, p{
+    color: #ABB2BF;
+    font-family: 'Fira Code';
+}
+.contacto-text p{
+    font-size: 15px;
+}
+.contacto-lista a{
+    color: #ABB2BF;
+    font-size: 13px;
+}
+.contacto-lista{
+    margin-bottom: 3rem;
+}
+.contacto-lista li{
+    margin-bottom: 5px;
+    display: block;
+}
+.contacto-iconos img{
+    width: 31px;
+    height: 31px;
+    border-radius: 0.5rem;
+    /* filter: invert(75%) sepia(100%) saturate(4460%) hue-rotate(224deg) brightness(88%) contrast(97%); */
+    filter: invert(76%) sepia(12%) saturate(245%) hue-rotate(180deg) brightness(91%) contrast(95%);
+    display: inline-flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 14px;
+}
+.formulario input, textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: #12141c;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ABB2BF;
+    font-family: 'Fira Code';
+}
+.formulario textarea{
+    height: 180px;
+    resize: none;
+}
+.formulario .send{
+    font-size: 17px;
+    font-family: 'Fira Code';
+    font-weight: 500;
+    color: #ABB2BF;
+    cursor: pointer;
+    width: 150px;
+    transition: all 0.4s ease;
+}
+.formulario .send:hover {
+    background-color: #39414e;
+}
+@media (max-width: 768px){
+    .contacto{
+        display: block;
+    }
+    .contacto-iconos{
+        margin-bottom: 25px;
+    }
+}
+
+/* Footer */
+
+.footer{
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Fira Code';
+    margin: 26px 0;
+}
+.footer p{
+    align-items: center;
+    margin: 0;
+}
+.footer img{
+    position: relative;
+    bottom: -4px;
+    filter: invert(76%) sepia(12%) saturate(245%) hue-rotate(180deg) brightness(91%) contrast(95%);
+    width: 17px;
+}
